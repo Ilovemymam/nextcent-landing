@@ -166,7 +166,7 @@ main{
     font-family: "Inter",sans-serif;
     font-size: 11px;
     font-weight: 400;
-    margin: 5;
+    margin: 5px;
     margin-bottom: 11px;
 }
 .list{
@@ -605,29 +605,54 @@ footer a{
     }
 }
 @media(max-width:900px){
+     .spisok{
+        display: flex;
+        flex-direction: column;
+    }
     .container{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        gap:0px;
+       gap:clamp(5px,3.6vw,20px);
     }
-    .spisok{
-        flex-direction: row;
-        gap:1px;
-        margin: 0;
+    .logo{
+        width: 100px;
+        height: auto;
+    }
+    .burger{
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
         padding: 0;
     }
-    .spisok li{
-        padding: 0px 8px;
-        border-bottom: 1px solid #eee;
-        text-align: center;
+    .nav{
+        display: none;
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
+        max-width: 100%;
     }
     .list1{
-        display: none;
+        display: block;
     }
-    .header-left{
-        gap:10px;
+    .list2{
+        display: block;
     }
+ 
+.who{
+    text-align: center;
+}
+    .nav.open{
+        display: block;
+    }
+    .spisok li{
+        padding: 16px 20px;
+        border-top: 1px solid #eee;
+    }
+    
     .grid{
     max-width: 100%;
     width: 100%;
@@ -670,6 +695,12 @@ footer a{
         z-index: 10;
         background-color: white;
         max-width: 100%;
+    }
+    .list1{
+        display: block;
+    }
+    .list2{
+        display: block;
     }
  
 .who{
